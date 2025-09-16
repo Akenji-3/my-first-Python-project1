@@ -1,0 +1,26 @@
+dogs = ["Nico", "Lucky", "angrydog", "saddog", "happydog"]
+
+while True:
+    print ("what would you like to do? (add/remove/exit)")
+    action = input()
+
+    if action == "add":
+        print ("what will you name your dog?")
+        newdog = input()
+        dogs.append(newdog)
+        print ("the new list is: " + ", ".join(dogs))
+
+
+    elif action == "remove":
+            print ("what dog would you like to remove?")
+            dogToRemove = input()
+            dogs.remove(dogToRemove)
+            print ("the list is: " + ", ".join(dogs))
+
+    elif action =="exit":
+        break
+
+    else:
+        print ("this action is not tolerated, you shall die,...")
+        for i in range(100000000000000):
+            print("I love Nico", i + 1)
