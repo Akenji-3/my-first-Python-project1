@@ -1,0 +1,26 @@
+dogs = ["Nico", "Lucky", "Angrydog", "Saddog"]
+
+while True:
+    print ("What would you like to do? (add/remove/exit)")
+    print ("the current dog list is :")
+    print (", ".join(dogs))
+    action = input()
+
+    if action == "add":
+        print ("what would you like to name your new dog?")
+        name = input()
+        dogs.append(name)
+
+    elif action == "remove":
+        print ("who would you like to remove a dog?")
+        dogToRemove = input()
+        if dogToRemove in dogs:
+            dogs.remove(dogToRemove)
+        else:
+            print("Dog does not exist")
+
+    elif action == "exit":
+        break
+
+    else:
+        print ("invalid input")
